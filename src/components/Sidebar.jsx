@@ -54,8 +54,6 @@ const SidebarLayout = ({children}) => {
     const pathName = usePathname()
     const [isCollapse, setIsCollapse] = useState(false)
 
-    console.log(isCollapse)
-
     const {
         token: {colorBgContainer},
     } = theme.useToken();
@@ -88,12 +86,13 @@ const SidebarLayout = ({children}) => {
                     style={{
                         padding: 0,
                         background: colorBgContainer,
-                        height: "100px"
+                        height: "100px",
+                        marginBottom: '25px'
                     }}
                 />
                 <Content className="flex flex-col gap-y-2 mx-10 my-2">
                     <div style={{
-                        padding: 24,
+                        padding: '48px',
                         background: colorBgContainer,
                     }}
                          className={'min-h-screen'}
