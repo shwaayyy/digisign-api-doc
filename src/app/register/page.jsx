@@ -1,6 +1,6 @@
 'use client'
 
-import SidebarLayout from "@/components/Sidebar";
+import SidebarLayout from "@/components/Template";
 import Point from "@/components/Point";
 import TableAPI from "@/components/TableAPI";
 import {columnsHeader as columns, dataHeader as data} from "@/app/register/helper";
@@ -34,7 +34,7 @@ const Register = () => {
                                 <li>
                                     Silakan tambahkan dalam istilah & kondisi di sisi aplikasi Anda bahwa: Pengguna
                                     telah membaca dan setuju bahwa data pribadi mereka akan terdaftar ke Digisign.
-                                    [template]
+                                    [<a href="#" className={'underline'}>template</a>]
                                 </li>
                                 <li>
                                     Digisign mengharuskan Selfiephoto diambil oleh pengguna langsung melalui aplikasi

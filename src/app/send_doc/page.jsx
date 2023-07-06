@@ -1,4 +1,4 @@
-import SidebarLayout from "@/components/Sidebar";
+import SidebarLayout from "@/components/Template";
 
 const About = () => {
     return (

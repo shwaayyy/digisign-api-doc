@@ -1,5 +1,5 @@
 'use client'
-import SidebarLayout from "@/components/Sidebar";
+import SidebarLayout from "@/components/Template";
 
 const Activation = () => {
     return (

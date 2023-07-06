@@ -49,7 +49,7 @@ const items = [
         type: 'group'
     }
 ];
-const SidebarLayout = ({children}) => {
+const Template = ({children}) => {
     const router = useRouter()
     const pathName = usePathname()
     const [isCollapse, setIsCollapse] = useState(false)
@@ -105,10 +105,10 @@ const SidebarLayout = ({children}) => {
                         textAlign: 'center',
                     }}
                 >
-                    Digisign ©2023 Created by Wahyu
+                    Digisign ©2023 Created by Digisign Product Team
                 </Footer>
             </Layout>
         </Layout>
     );
 };
-export default SidebarLayout;
+export default Template;
