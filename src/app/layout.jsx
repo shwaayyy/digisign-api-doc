@@ -16,7 +16,7 @@ export default function RootLayout({children}) {
         <html lang="en">
         <head><title>{metadata.title}</title></head>
         <body className={poppins.className}>
-        <RootStyleRegistry>{children}</RootStyleRegistry>
+            <RootStyleRegistry>{children}</RootStyleRegistry>
         </body>
         </html>
     )

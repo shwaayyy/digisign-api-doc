@@ -74,7 +74,7 @@ const Template = ({children}) => {
                     position: "fixed",
                     width: '400px'
                 }}
-                className={"min-h-screen"}
+                className={"min-h-screen z-40"}
             >
                 <div className="h-16"/>
                 <Menu onClick={(v) => router.push(v.key)} theme="light" defaultSelectedKeys={[pathName]}

@@ -37,3 +37,9 @@ body {
   padding: 0;
   margin-top: -20px;
 }
+
+.ant-layout-sider-zero-width-trigger .ant-layout-sider-zero-width-trigger-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
