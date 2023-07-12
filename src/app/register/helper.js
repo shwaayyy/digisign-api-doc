@@ -3,11 +3,21 @@ export const columnsHeader = [
         title: 'Key',
         dataIndex: 'keyHeader',
         key: 'keyHeader',
+        render: (record) => {
+            return (
+                <h2 className={'font-bold'}>{record}</h2>
+            )
+        }
     },
     {
         title: 'Value',
         dataIndex: 'valueHeader',
         key: 'valueHeader',
+        render: (record) => {
+            return (
+                <h2 className={'text-sky-600'}>{record}</h2>
+            )
+        }
     }
 ];
 
