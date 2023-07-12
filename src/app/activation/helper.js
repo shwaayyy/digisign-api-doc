@@ -44,3 +44,78 @@ export const multiPartField = [
         information: "Periksa bagian jsonfield di bawah ini"
     }
 ]
+
+export const jsonFieldData = [
+    {
+        field: "JSONFile*",
+        dataType: "Json String",
+        length: "",
+        information: ""
+    },
+    {
+        field: "userid*",
+        dataType: "String",
+        length: "80",
+        information: "email admin mitra (yang terdaftar di Digisign)"
+    },
+    {
+        field: "email_user*",
+        dataType: "String",
+        length: "80",
+        information: "email user yang ingin melakukan aktivasi"
+    },
+]
+
+export const resActivation = [
+    {
+        field: "JSONFile*",
+        dataType: "Json String",
+        length: "",
+        information: ""
+    },
+    {
+        field: "result*",
+        dataType: "String",
+        length: "2",
+        information: "Kode respon (00 = success)"
+    },
+    {
+        field: "link*",
+        dataType: "String",
+        length: "",
+        information: "link webview untuk aktivasi"
+    },
+]
+
+export const resDataACT = [
+    {
+        field: "JSONFile*",
+        dataType: "Json String",
+        length: "",
+        information: ""
+    },
+    {
+        field: "email_user",
+        dataType: "String",
+        length: "80",
+        information: "email pengguna yang baru saja menyelesaikan proses aktivasi"
+    },
+    {
+        field: "result",
+        dataType: "String",
+        length: "",
+        information: "Response code"
+    },
+    {
+        field: "notif",
+        dataType: "String",
+        length: "",
+        information: "informasi response code"
+    },
+    {
+        field: "verifikasi",
+        dataType: "boolean",
+        length: "",
+        information: "Hasil verifikasi data dari DUKCAPIL"
+    },
+]
