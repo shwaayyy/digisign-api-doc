@@ -23,14 +23,17 @@ export const columnsHeader = [
 
 export const dataHeader = [
     {
+        key: '1',
         keyHeader: "Fungsi",
         valueHeader: "API ini digunakan untuk generate link aktivasi user ke Digisign"
     },
     {
+        key: '2',
         keyHeader: "Link",
         valueHeader: "https://api.tandatanganku.com/gen/genACTPage.html"
     },
     {
+        key: '3',
         keyHeader: "Redirect",
         valueHeader: "Anda harus memberikan link redirect dan kami akan mengarahkan ke link ini ketika pengguna telah mengaktifkan akun digisign mereka."
     },
@@ -38,6 +41,7 @@ export const dataHeader = [
 
 export const multiPartField = [
     {
+        key: '1',
         field: "jsonfield*",
         dataType: "Json String",
         length: "",
@@ -47,18 +51,21 @@ export const multiPartField = [
 
 export const jsonFieldData = [
     {
+        key: '1',
         field: "JSONFile*",
         dataType: "Json String",
         length: "",
         information: ""
     },
     {
+        key: '2',
         field: "userid*",
         dataType: "String",
         length: "80",
         information: "email admin mitra (yang terdaftar di Digisign)"
     },
     {
+        key: '3',
         field: "email_user*",
         dataType: "String",
         length: "80",
@@ -68,18 +75,21 @@ export const jsonFieldData = [
 
 export const resActivation = [
     {
+        key: '1',
         field: "JSONFile*",
         dataType: "Json String",
         length: "",
         information: ""
     },
     {
+        key: '2',
         field: "result*",
         dataType: "String",
         length: "2",
         information: "Kode respon (00 = success)"
     },
     {
+        key: '3',
         field: "link*",
         dataType: "String",
         length: "",
@@ -89,30 +99,35 @@ export const resActivation = [
 
 export const resDataACT = [
     {
+        key: '1',
         field: "JSONFile*",
         dataType: "Json String",
         length: "",
         information: ""
     },
     {
+        key: '2',
         field: "email_user",
         dataType: "String",
         length: "80",
         information: "email pengguna yang baru saja menyelesaikan proses aktivasi"
     },
     {
+        key: '3',
         field: "result",
         dataType: "String",
         length: "",
         information: "Response code"
     },
     {
+        key: '4',
         field: "notif",
         dataType: "String",
         length: "",
         information: "informasi response code"
     },
     {
+        key: '5',
         field: "verifikasi",
         dataType: "boolean",
         length: "",

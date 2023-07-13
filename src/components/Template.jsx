@@ -95,7 +95,7 @@ const Template = ({children}) => {
                         padding: '48px',
                         background: colorBgContainer,
                     }}
-                         className={'min-h-screen'}
+                         className={'min-h-screen flex flex-col gap-y-8'}
                     >
                         {children}
                     </div>
@@ -105,7 +105,7 @@ const Template = ({children}) => {
                         textAlign: 'center',
                     }}
                 >
-                    Digisign ©2023 Created by Digisign Product Team
+                    Digisign ©2023 Created by Digisign QA Team
                 </Footer>
             </Layout>
         </Layout>
