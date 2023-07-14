@@ -45,6 +45,50 @@ const items = [
                     }
                 ]
             },
+            {
+                label: 'Download',
+                key: 'subdoc2',
+                icon: null,
+                children: [
+                    {
+                        label: 'File',
+                        icon: null,
+                        key: '/file/file_download'
+                    },
+                    {
+                        label: 'Base64',
+                        icon: null,
+                        key: '/file/base64'
+                    }
+                ]
+            },
+            {
+                label: 'Ganti Email/Password',
+                key: '/change_email',
+                icon: null
+            },
+            {
+                label: 'Response Code',
+                key: 'subdoc3',
+                icon: null,
+                children: [
+                    {
+                        label: 'API',
+                        icon: null,
+                        key: '/response_code/api'
+                    },
+                    {
+                        label: 'HTML',
+                        icon: null,
+                        key: '/response_code/html'
+                    }
+                ]
+            },
+            {
+                label: 'Template',
+                key: '/terms',
+                icon: null
+            },
         ],
         type: 'group'
     }

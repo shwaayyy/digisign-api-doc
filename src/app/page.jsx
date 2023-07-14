@@ -21,7 +21,6 @@ const home = () => {
                 return newLoadings;
             });
         }, 1000);
-        console.log(loadings)
     };
     return (
         <>

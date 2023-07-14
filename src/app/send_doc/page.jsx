@@ -4,10 +4,11 @@ import Point from "@/components/Point";
 import TableAPI from "@/components/TableAPI";
 import {APIColumns, columnsHeader} from "@/app/register/helper";
 import {
+    columnsMeterai, exJSONMeterai,
     exJSONres,
     exMessage,
-    exMessageHeader,
-    jsonFieldSendDoc,
+    exMessageHeader, exResJSONMeterai,
+    jsonFieldSendDoc, meteraiTable,
     multipartSendDoc, reqJSON,
     resSendDoc,
     sendDocHeader
@@ -79,8 +80,16 @@ const About = () => {
                             harus termasuk, yang meterai_positions dan document_type
                         </p>
                         <Point title={"contoh Request untuk kirim dokumen dengan meterai:"} titleSize={"text-xl"}>
-
+                            <TableAPI columns={columnsMeterai} dataTable={meteraiTable} border={true}/>
                         </Point>
+                        <div className={"flex flex-col gap-y-3"}>
+                            <Card title={"Contoh request JSON yang diterima ke digisign"} type={"inner"} bordered={false}>
+                                <pre className={"text-sm"}>{exJSONMeterai}</pre>
+                            </Card>
+                            <Card title={"Contoh Respon JSON yang dikirimkan ke anda"} type={"inner"} bordered={false}>
+                                <pre>{exResJSONMeterai}</pre>
+                            </Card>
+                        </div>
                     </Point>
                 </SidebarLayout>
             </div>

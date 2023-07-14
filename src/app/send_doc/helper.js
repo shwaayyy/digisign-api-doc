@@ -332,3 +332,152 @@ export const exJSONres = `<RECEIVE> {
         "result": "00"
     }
 }`
+
+export const columnsMeterai = [
+    {
+        title: 'Key',
+        dataIndex: 'keyMeterai',
+        key: 'keyMeterai',
+        render: (record) => {
+            return (
+                <h2 className={'font-bold'}>{record}</h2>
+            )
+        }
+    },
+    {
+        title: 'Value',
+        dataIndex: 'valueMeterai',
+        key: 'valueMeterai',
+        render: (record) => {
+            return (
+                <pre className={'font-mono text-sm'}>{record}</pre>
+            )
+        }
+    }
+]
+
+export const meteraiTable = [
+    {
+        keyMeterai: "jsonfield",
+        valueMeterai: JSON.stringify(
+            {
+                "JSONFile": {
+                    "userid": "admin@mitra.com",
+                    "document_id": "20180920_AB",
+                    "payment": "3",
+                    "redirect": true,
+                    "send-to": [
+                        {
+                            "name": "eka",
+                            "email": "eka@hotmail.com"
+                        },
+                        {
+                            "name": "eko",
+                            "email": "eko@hotmail.com"
+                        }
+                    ],
+                    "req-sign": [
+                        {
+                            "name": "test1",
+                            "email": "test@hotmail.com",
+                            "user": "ttd1",
+                            "page": "3",
+                            "llx": "12",
+                            "lly": "15",
+                            "urx": "12",
+                            "ury": "15",
+                            "visible": "1"
+                        },
+                        {
+                            "name": "test2",
+                            "email": "test2@hotmail.com",
+                            "user": "ttd2",
+                            "page": "4",
+                            "llx": "12",
+                            "lly": "15",
+                            "urx": "12",
+                            "ury": "15",
+                            "visible": "1"
+                        }
+                    ],
+                    "meterai-positions": [
+                        {
+                            "llx": "110",
+                            "lly": "110",
+                            "urx": "200",
+                            "ury": "200",
+                            "page": "1"
+                        }
+                    ],
+                    "document_type": "2"
+                }
+            },
+            null,
+            1
+        )
+    },
+    {
+        keyMeterai: "File",
+        valueMeterai: "perjanjian.pdf"
+    }
+]
+
+export const exJSONMeterai = `<SEND> [jsonfield]: '{
+    "JSONFile": {
+        "userid": "admin@mitra.com",
+        "document_id": "20180920_AB",
+        "payment": "3",
+        "redirect": true,
+        "send-to": [
+            {
+                "name": "eka",
+                "email": "eka@hotmail.com"
+            },
+            {
+                "name": "eko",
+                "email": "eko@hotmail.com"
+            }
+        ],
+        "req-sign": [
+            {
+                "name": "test1",
+                "email": "test@hotmail.com",
+                "user": "ttd1",
+                "page": "3",
+                "llx": "12",
+                "lly": "15",
+                "urx": "12",
+                "ury": "15",
+                "visible": "1"
+            },
+            {
+                "name": "test2",
+                "email": "test2@hotmail.com",
+                "user": "ttd2",
+                "page": "4",
+                "llx": "12",
+                "lly": "15",
+                "urx": "12",
+                "ury": "15",
+                "visible": "1"
+            }
+        ],
+        "meterai-positions": [
+            {
+                "llx": "110",
+                "lly": "110",
+                "urx": "200",
+                "ury": "200",
+                "page": "1"
+            }
+        ],
+        "document_type": "2"
+    }
+}'; [file] :{perjanjian.pdf,305603};`
+
+export const exResJSONMeterai = `<RECEIVE> ${JSON.stringify({
+    "JSONFile": {
+        "notif": "Kirim dokumen berhasil.",
+        "result": "00"
+    }
+}, null, 1)}`

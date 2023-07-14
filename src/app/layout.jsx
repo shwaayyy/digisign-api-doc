@@ -14,9 +14,12 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <head><title>{metadata.title}</title></head>
+        <head>
+            <title>{metadata.title}</title>
+            <link rel="icon" href="/favicon.ico" sizes="any" />
+        </head>
         <body className={poppins.className}>
-            <RootStyleRegistry>{children}</RootStyleRegistry>
+        <RootStyleRegistry>{children}</RootStyleRegistry>
         </body>
         </html>
     )
