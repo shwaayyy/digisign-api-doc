@@ -1,5 +1,5 @@
 'use client'
-import {RootStyleRegistry} from '@/modules/shared/components/root-style-registry'
+
 import '@/styles/globals.css'
 import {Poppins} from 'next/font/google'
 import React from "react";
@@ -19,7 +19,7 @@ export default function RootLayout({children}) {
             <link rel="icon" href="/favicon.ico" sizes="any" />
         </head>
         <body className={poppins.className}>
-        <RootStyleRegistry>{children}</RootStyleRegistry>
+        {children}
         </body>
         </html>
     )
