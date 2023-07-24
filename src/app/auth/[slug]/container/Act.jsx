@@ -4,13 +4,12 @@ import Point from "@/components/Point";
 import TableAPI from "@/components/TableAPI";
 import {
     columnsHeader,
-    dataHeader,
     jsonFieldData,
     multiPartField,
     resActivation,
-    resDataACT
-} from "@/app/activation/helper";
-import {APIColumns} from "@/app/register/helper";
+    resDataACT,
+    APIColumns, dataHeaderAct
+} from "@/app/auth/helper";
 import {Card} from "antd";
 
 const Activation = () => {
@@ -20,7 +19,7 @@ const Activation = () => {
                 <SidebarLayout>
                     <Point title={"API Aktivasi"} customClassTitle={"text-sky-800"}
                            customClassContent={"flex flex-col gap-y-[50px]"}>
-                        <TableAPI columns={columnsHeader} dataTable={dataHeader} visibleHeader={false} border={true}/>
+                        <TableAPI columns={columnsHeader} dataTable={dataHeaderAct} visibleHeader={false} border={true}/>
                         <Point title={"Multipart Field:"} customClassTitle={"text-xl"}>
                             <TableAPI columns={APIColumns} dataTable={multiPartField}/>
                         </Point>

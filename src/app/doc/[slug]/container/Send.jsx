@@ -2,7 +2,7 @@
 import SidebarLayout from "@/components/Template";
 import Point from "@/components/Point";
 import TableAPI from "@/components/TableAPI";
-import {APIColumns, columnsHeader} from "@/app/register/helper";
+import {APIColumns, columnsHeader} from "@/app/auth/helper";
 import {
     columnsMeterai, exJSONMeterai,
     exJSONres,
@@ -12,12 +12,12 @@ import {
     multipartSendDoc, reqJSON,
     resSendDoc,
     sendDocHeader
-} from "@/app/send_doc/helper";
+} from "@/app/doc/helper";
 import TutorialTTDPosImage from "/public/tutorial.png"
 import Image from "next/image";
 import {Card} from "antd";
 
-const About = () => {
+const SendDoc = () => {
 
     return (
         <>
@@ -97,4 +97,4 @@ const About = () => {
     )
 }
 
-export default About
+export default SendDoc

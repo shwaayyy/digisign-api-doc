@@ -1,11 +1,14 @@
 import SidebarLayout from "@/components/Template";
+import Point from "@/components/Point";
 
 const TemplateTerms = () => {
     return (
         <>
             <div>
                 <SidebarLayout>
-                    <h1>Template</h1>
+                    <Point title={"Template"}>
+
+                    </Point>
                 </SidebarLayout>
             </div>
         </>

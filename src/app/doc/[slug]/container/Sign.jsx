@@ -3,8 +3,9 @@
 import SidebarLayout from "@/components/Template";
 import Point from "@/components/Point";
 import TableAPI from "@/components/TableAPI";
-import {APIColumns, columnsHeader} from "@/app/register/helper";
-import {dataSignDoc, headerSignDoc} from "@/app/sign_doc/helper";
+import {APIColumns, columnsHeader} from "@/app/auth/helper";
+import {dataSignDoc, headerSignDoc} from "@/app/doc/helper";
+
 
 const SignDoc = () => {
     return (
@@ -18,7 +19,6 @@ const SignDoc = () => {
                         <Point title={"Multipart Field:"} titleSize={"text-xl"}>
                             <TableAPI columns={APIColumns} dataTable={dataSignDoc}/>
                         </Point>
-
                     </Point>
                 </SidebarLayout>
             </div>

@@ -11,7 +11,7 @@ const home = () => {
         setLoadings((prevLoadings) => {
             const newLoadings = [...prevLoadings];
             newLoadings[index] = true;
-            router.push('/register')
+            router.push('/auth/register')
             return newLoadings;
         });
         setTimeout(() => {
@@ -27,7 +27,7 @@ const home = () => {
             <div className="min-w-full min-h-screen px-40 flex flex-col gap-4 items-center justify-center">
                 <h1 className="font-extrabold text-2xl">Digisign API</h1>
                 <Button
-                    type="primary"
+                    type="default"
                     loading={loadings[1]}
                     onClick={() => enterLoading(1)}
                 >

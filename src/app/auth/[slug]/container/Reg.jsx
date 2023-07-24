@@ -15,7 +15,7 @@ import {
     responseAPI,
     sampleResCol,
     sampleResData, resVerData
-} from "@/app/register/helper";
+} from "@/app/auth/helper";
 import {Card} from "antd";
 import {useEffect, useState} from "react";
 

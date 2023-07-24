@@ -19,12 +19,12 @@ const items = [
                     {
                         label: 'Registrasi',
                         icon: null,
-                        key: '/register'
+                        key: '/auth/register'
                     },
                     {
                         label: 'Aktivasi',
                         icon: null,
-                        key: '/activation'
+                        key: '/auth/activation'
                     },
                 ]
             },
@@ -36,12 +36,12 @@ const items = [
                     {
                         label: 'Kirim Dokumen',
                         icon: null,
-                        key: '/send_doc'
+                        key: '/doc/send'
                     },
                     {
                         label: 'Tandatangan Dokumen',
                         icon: null,
-                        key: '/sign_doc'
+                        key: '/doc/sign'
                     }
                 ]
             },
