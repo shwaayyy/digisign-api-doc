@@ -147,7 +147,7 @@ const Register = () => {
                                     return (
                                         <Card title={`${seq}. ${v.title}`} type={"inner"} className={"w-full"} key={i}
                                               bordered={false}>
-                                            <div className={"whitespace-pre-wrap font-mono "}>{v.val}</div>
+                                            <div className={"whitespace-pre-wrap font-mono overflow-ellipsis text-sm"}>{v.val}</div>
                                         </Card>
                                     )
                                 })}

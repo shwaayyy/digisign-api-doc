@@ -3,33 +3,29 @@
 import {useState} from "react";
 import {Button} from "antd";
 import {useRouter} from "next/navigation";
+import {LoadingOutlined} from "@ant-design/icons";
 
 const home = () => {
-    const [loadings, setLoadings] = useState([]);
+    const [loading, setLoading] = useState(false);
     const router = useRouter()
-    const enterLoading = (index) => {
-        setLoadings((prevLoadings) => {
-            const newLoadings = [...prevLoadings];
-            newLoadings[index] = true;
-            router.push('/auth/register')
-            return newLoadings;
-        });
+    const enterLoading = () => {
+        setLoading(true);
         setTimeout(() => {
-            setLoadings((prevLoadings) => {
-                const newLoadings = [...prevLoadings];
-                newLoadings[index] = false;
-                return newLoadings;
-            });
-        }, 1000);
+            router.push("/auth/register")
+        }, 2000)
     };
+
     return (
         <>
             <div className="min-w-full min-h-screen px-40 flex flex-col gap-4 items-center justify-center">
                 <h1 className="font-extrabold text-2xl">Digisign API</h1>
                 <Button
                     type="default"
-                    loading={loadings[1]}
-                    onClick={() => enterLoading(1)}
+                    loading={loading[1]}
+                    onClick={() => enterLoading()}
+                    icon={loading === true ? <LoadingOutlined/> : null}
+                    danger={true}
+                    size={"large"}
                 >
                     Click me!
                 </Button>

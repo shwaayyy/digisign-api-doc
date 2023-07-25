@@ -2,10 +2,13 @@
 import {Layout, Menu, theme} from 'antd';
 import {useRouter, usePathname} from "next/navigation";
 import {useState} from "react";
+import DigisignLogo from "/public/digisign-id-white.png";
+import Image from "next/image";
+import Link from "next/link";
 
 const {Header, Content, Footer, Sider} = Layout;
 
-const items = [
+const itemsNav = [
     {
         label: 'Digisign API',
         key: 'api',
@@ -105,7 +108,7 @@ const Template = ({children}) => {
     return (
         <Layout>
             <Sider
-                theme={"light"}
+                theme={"dark"}
                 breakpoint="lg"
                 collapsedWidth="0"
                 onBreakpoint={(broken) => {
@@ -116,14 +119,18 @@ const Template = ({children}) => {
                 }}
                 style={{
                     position: "fixed",
-                    width: '400px'
+                    width: '500px'
                 }}
                 className={"min-h-screen z-40"}
             >
-                <div className="h-16"/>
-                <Menu onClick={(v) => router.push(v.key)} theme="light" defaultSelectedKeys={[pathName]}
-                      items={items}
-                      inlineIndent={50} mode={'vertical'}/>
+                <div className="h-24 bg-[#001529] p-5">
+                    <Link href={"/"}>
+                        <Image src={DigisignLogo} alt={"logo"} width={175}/>
+                    </Link>
+                </div>
+                <Menu onClick={(v) => router.push(v.key)} theme="dark" defaultSelectedKeys={[pathName]}
+                      items={itemsNav}
+                      inlineIndent={100} mode={'vertical'}/>
             </Sider>
             <Layout className={`lg:ml-[200px] ${isCollapse && "ml-0"}`}>
                 <Header

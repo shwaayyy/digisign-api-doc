@@ -506,4 +506,75 @@ export const exResJSONMeterai = `<RECEIVE> ${JSON.stringify({
     }
 }, null, 1)}`
 
+export const dataJsonFieldSign = [
+    {
+        key: '1',
+        field: "JSONField*",
+        dataType: "JSON String",
+        length: "",
+        information: ""
+    },
+    {
+        key: '2',
+        field: "userid*",
+        dataType: "String",
+        length: "80",
+        information: "Email admin mitra"
+    },
+    {
+        key: '3',
+        field: "document_id*",
+        dataType: "String",
+        length: "20",
+        information: "dokumen id mitra(unik)"
+    },
+    {
+        key: '4',
+        field: "email_user*",
+        dataType: "String",
+        length: "80",
+        information: "email pengguna yang ingin tandatangan"
+    },
+    {
+        key: '5',
+        field: "view_only (optional)",
+        dataType: "boolean",
+        length: "",
+        information: "jika 'true' maka pengguna hanya dapat melihat dokumen jika 'false' atau bidang ini tidak ada maka pengguna dapat melihat dan menandatangani dokumen"
+    }
+]
 
+export const resJsonSign = [
+    {
+        key: '1',
+        field: "JSONField*",
+        dataType: "JSON String",
+        length: "",
+        information: ""
+    },
+    {
+        key: '2',
+        field: "result*",
+        dataType: "String",
+        length: "2",
+        information: "kode respon"
+    },
+    {
+        key: '3',
+        field: "link*",
+        dataType: "String",
+        information: "Tautan html untuk tampilan web proses tandatangan"
+    }
+]
+
+export const exJSONReqSign = `<SEND> [jsonfield] : "JSONFile": ${JSON.stringify({
+    "userid": "admin@gmail.com",
+    "email_user": "test@hotmail.com",
+    "document_id": "testdoc123",
+    "view_only": false
+}, null, 1)}`
+
+export const exJSONResSign = `<RECEIVE> { "JSONFile" : ${JSON.stringify({
+    "result": "00",
+    "link": "https://wv.tandatanganku.com/viewpage.html?view=aO7%2B4ui1zFz%2BsbMl4nb%2BLPAC17uvhMHPZ%2FexPaVRXas8ZAbL%2FElzcV9JxlH5YI%2FuMHtrI3qre6N4AVnkDbQiL%2BTNp3sPsr76xPAsq3cFgbvIH6xcgxJVruMaykkMMqC4bC3WMj%2FiAIM80B4yuuw6KQ%3D%3D"
+})} }`
