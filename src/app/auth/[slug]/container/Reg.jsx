@@ -35,7 +35,7 @@ const Register = () => {
         <>
             <SidebarLayout>
                 <div className={"flex flex-col gap-y-[50px]"}>
-                    <Point title={"Dokumentasi"}>
+                    <Point title={"Dokumentasi API Digisign"}>
                         <p>
                             Digisign API adalah Application Programming Interface (API) yang dikembangkan oleh PT SNI
                             (Solusi
@@ -108,7 +108,7 @@ const Register = () => {
                                     {"<SEND> [jsonfield] \n{\n" +
                                         "    \"JSONFile\": {\n" +
                                         "        \"userid\": \"admin@ptmitra.com\",\n" +
-                                        "        \"jenis_kelamin\":\"<lak></lak>i-laki\",\n" +
+                                        "        \"jenis_kelamin\":\"laki-laki\",\n" +
                                         "        \"kota\":\"pekalongan\",\n" +
                                         "        \"nama\": \"testregistrasi\",\n" +
                                         "        \"tlp\":\"6281290700111\",\n" +

@@ -8,10 +8,12 @@ import {
     dataJsonFieldSign,
     dataSignDoc, exJSONReqSign,
     exJSONResSign,
-    headerSignDoc,
+    headerSignDoc, RedirectRes,
     resJsonSign
 } from "@/app/doc/helper";
+import WVImage from "/public/webview.png"
 import {Card} from "antd";
+import Image from "next/image";
 
 
 const SignDoc = () => {
@@ -44,7 +46,31 @@ const SignDoc = () => {
                                     {exJSONReqSign}
                                 </pre>
                             </Card>
-                            <Card title={"contoh respon JSON yang dikirimkan ke anda"} bordered={false} type={'inner'} >
+                            <Card title={"contoh respon JSON yang dikirimkan ke anda"} bordered={false} type={'inner'}>
+                                <pre className={'py-5'}>
+                                    {exJSONResSign}
+                                </pre>
+                            </Card>
+                        </div>
+                        <Point title={"Contoh WebView:"} titleSize={"text-xl"}
+                               customClassContent={"flex items-center justify-center"}>
+                            <Image src={WVImage} alt={"example webview"}/>
+                        </Point>
+                        <Point title={"Redirect:"} titleSize={"text-xl"} customClassContent={"flex flex-col gap-y-5"}>
+                            <p>{"Kami akan mengarahkan ke https://{link_html_anda}?msg={respon} respons akan dienkripsi oleh AES. Anda bisa menggunakan AES/ECB/PKCS5Padding library. Respons:"}</p>
+                            <TableAPI columns={APIColumns} dataTable={RedirectRes}/>
+                        </Point>
+                        <div className={"flex flex-col gap-y-3"}>
+                            <Card title={"Contoh Respon redirect"} type={"inner"} bordered={false}>
+                                <pre>
+                                    {exJSONReqSign}
+                                </pre>
+                            </Card>
+                            <Card
+                                title={"Respon setelah Decrypt:"}
+                                extra={<p>(Anda dapat menguji Decrypt dengan kunci AES - contoh- : <span
+                                    className={"text-blue-700"}>RBazsYSDTuShYbUG</span>)</p>} bordered={false}
+                                type={'inner'}>
                                 <pre className={'py-5'}>
                                     {exJSONResSign}
                                 </pre>

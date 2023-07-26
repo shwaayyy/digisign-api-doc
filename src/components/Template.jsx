@@ -121,23 +121,24 @@ const Template = ({children}) => {
                     position: "fixed",
                     width: '500px'
                 }}
+                width={250}
                 className={"min-h-screen z-40"}
             >
-                <div className="h-24 bg-[#001529] p-5">
+                <div className="h-24 bg-[#001529] p-5 flex items-center justify-center">
                     <Link href={"/"}>
-                        <Image src={DigisignLogo} alt={"logo"} width={175}/>
+                        <Image src={DigisignLogo} alt={"logo"} width={200}/>
                     </Link>
                 </div>
                 <Menu onClick={(v) => router.push(v.key)} theme="dark" defaultSelectedKeys={[pathName]}
                       items={itemsNav}
                       inlineIndent={100} mode={'vertical'}/>
             </Sider>
-            <Layout className={`lg:ml-[200px] ${isCollapse && "ml-0"}`}>
+            <Layout className={`lg:ml-[250px] ${isCollapse && "ml-0"}`}>
                 <Header
                     style={{
                         padding: 0,
                         background: colorBgContainer,
-                        height: "100px",
+                        height: "60px",
                         marginBottom: '25px'
                     }}
                 />

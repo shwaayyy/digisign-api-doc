@@ -307,7 +307,7 @@ export const exMessage = [
     }
 ]
 
-export const reqJSON = `<SEND> [jsonfield] :{
+export const reqJSON = `<SEND> [jsonfield] : ${JSON.stringify({
     "JSONFile": {
         "userid": "admin@gmail.com",
         "document_id": "20180920_AB",
@@ -348,7 +348,7 @@ export const reqJSON = `<SEND> [jsonfield] :{
             }
         ]
     }
-}; [file] :{perjanjian.pdf,305603};`
+})}; [file] :{perjanjian.pdf,305603};`
 
 export const exJSONres = `<RECEIVE> {
     "JSONFile": {
@@ -446,7 +446,7 @@ export const meteraiTable = [
     }
 ]
 
-export const exJSONMeterai = `<SEND> [jsonfield]: '{
+export const exJSONMeterai = `<SEND> [jsonfield]: ${JSON.stringify({
     "JSONFile": {
         "userid": "admin@mitra.com",
         "document_id": "20180920_AB",
@@ -497,7 +497,7 @@ export const exJSONMeterai = `<SEND> [jsonfield]: '{
         ],
         "document_type": "2"
     }
-}'; [file] :{perjanjian.pdf,305603};`
+})}; [file] :{perjanjian.pdf, 305603};`
 
 export const exResJSONMeterai = `<RECEIVE> ${JSON.stringify({
     "JSONFile": {
@@ -578,3 +578,42 @@ export const exJSONResSign = `<RECEIVE> { "JSONFile" : ${JSON.stringify({
     "result": "00",
     "link": "https://wv.tandatanganku.com/viewpage.html?view=aO7%2B4ui1zFz%2BsbMl4nb%2BLPAC17uvhMHPZ%2FexPaVRXas8ZAbL%2FElzcV9JxlH5YI%2FuMHtrI3qre6N4AVnkDbQiL%2BTNp3sPsr76xPAsq3cFgbvIH6xcgxJVruMaykkMMqC4bC3WMj%2FiAIM80B4yuuw6KQ%3D%3D"
 })} }`
+
+export const RedirectRes = [
+    {
+        key: '1',
+        field: "JSONField",
+        dataType: "JSON String",
+        length: "",
+        information: ""
+    },
+    {
+        key: '2',
+        field: "document_id",
+        dataType: "String",
+        length: "20",
+        information: "Dokumen yang baru saja ditandatangani"
+    },
+    {
+        key: '3',
+        field: "email_user",
+        dataType: "String",
+        length: "80",
+        information: "Email penandatangan yang baru saja menandatangani dokumen"
+    },
+    {
+        key: '4',
+        field: "status_document",
+        dataType: "String",
+        length: "",
+        information: "Status Dokumen completed: semua pengguna telah menandatangani dokumen waiting: ada pengguna yang belum menandatangani dokumen"
+    },
+]
+
+export const exResRedirectDec = `<RECEIVE> ${JSON.stringify({
+    "document_id": "sni040302",
+    "status_document": "complete",
+    "result": "00",
+    "notif": "Proses tanda tangan berhasil!",
+    "email_user": "digisigntest@tandatanganku.com"
+})}`
