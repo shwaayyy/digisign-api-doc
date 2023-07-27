@@ -610,6 +610,9 @@ export const RedirectRes = [
     },
 ]
 
+export const exResRedirect = "https://app.mitra.com/resultsign.html?msg=Cij6Jz9ui76E5Ky%2FqJRqt5jMp1gx%2Bz1onr2%2FO%2Fb%2FQQOlCOI%2FsNbocobyzf4XkeXTCZRJ%2B7r7J3%2FI%0AjMKCjBpOTpZuuhUUeQTD%2BmU43vsKbSKj0oQxhKUvUG%2BNcdYcTSRiM3ikRaMiBB4rrxQXdEwUu18r%0A1naOnZwvJw0ZnEx94Z4%3D"
+
+
 export const exResRedirectDec = `<RECEIVE> ${JSON.stringify({
     "document_id": "sni040302",
     "status_document": "complete",

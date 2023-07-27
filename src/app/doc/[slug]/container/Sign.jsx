@@ -7,7 +7,7 @@ import {APIColumns, columnsHeader} from "@/app/auth/helper";
 import {
     dataJsonFieldSign,
     dataSignDoc, exJSONReqSign,
-    exJSONResSign,
+    exJSONResSign, exResRedirect, exResRedirectDec,
     headerSignDoc, RedirectRes,
     resJsonSign
 } from "@/app/doc/helper";
@@ -61,9 +61,9 @@ const SignDoc = () => {
                             <TableAPI columns={APIColumns} dataTable={RedirectRes}/>
                         </Point>
                         <div className={"flex flex-col gap-y-3"}>
-                            <Card title={"Contoh Respon redirect"} type={"inner"} bordered={false}>
-                                <pre>
-                                    {exJSONReqSign}
+                            <Card title={"Contoh Respon redirect:"} type={"inner"} bordered={false}>
+                                <pre className={"py-4"}>
+                                    {exResRedirect}
                                 </pre>
                             </Card>
                             <Card
@@ -72,7 +72,7 @@ const SignDoc = () => {
                                     className={"text-blue-700"}>RBazsYSDTuShYbUG</span>)</p>} bordered={false}
                                 type={'inner'}>
                                 <pre className={'py-5'}>
-                                    {exJSONResSign}
+                                    {exResRedirectDec}
                                 </pre>
                             </Card>
                         </div>

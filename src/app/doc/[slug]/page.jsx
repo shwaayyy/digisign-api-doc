@@ -2,12 +2,11 @@
 
 import {usePathname} from "next/navigation";
 import {useEffect, useState} from "react";
-import FileBase64 from "@/app/file/[slug]/container/FileBase64";
 import SendDoc from "@/app/doc/[slug]/container/Send";
 import SignDoc from "@/app/doc/[slug]/container/Sign";
 
 
-const DocProcess = ({props}) => {
+const DocProcess = () => {
     const [path, setPath] = useState('send')
     const params = usePathname()
 
