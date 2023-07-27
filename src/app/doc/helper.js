@@ -1,13 +1,16 @@
 export const headerSignDoc = [
     {
+        key: '1',
         keyHeader: 'Fungsi',
         valueHeader: 'Api ini digunakan untuk mendapatkan link halaman tandatangan'
     },
     {
+        key: '2',
         keyHeader: 'Link',
         valueHeader: 'https://api.tandatanganku.com/gen/genSignPage.html'
     },
     {
+        key: '3',
         keyHeader: 'redirect',
         valueHeader: `Anda harus memberikan link redirect dan kami akan mengarahkan ke link ini ketika pengguna telah menandatangani dokumen. \n\n *Pilihan Redirect dalam dokumen kirim API.`
     }
@@ -350,12 +353,12 @@ export const reqJSON = `<SEND> [jsonfield] : ${JSON.stringify({
     }
 })}; [file] :{perjanjian.pdf,305603};`
 
-export const exJSONres = `<RECEIVE> {
+export const exJSONres = `<RECEIVE> ${JSON.stringify({
     "JSONFile": {
         "notif": "Kirim dokumen berhasil.",
         "result": "00"
     }
-}`
+})}`
 
 export const columnsMeterai = [
     {
@@ -382,6 +385,7 @@ export const columnsMeterai = [
 
 export const meteraiTable = [
     {
+        key: "1",
         keyMeterai: "jsonfield",
         valueMeterai: JSON.stringify(
             {
@@ -441,6 +445,7 @@ export const meteraiTable = [
         )
     },
     {
+        key: "2",
         keyMeterai: "File",
         valueMeterai: "perjanjian.pdf"
     }
