@@ -17,7 +17,7 @@ const Activation = () => {
         <>
             <div>
                 <SidebarLayout>
-                    <Point title={"API Aktivasi"} customClassTitle={"text-sky-800"}
+                    <Point title={"API Aktivasi"} customClassTitle={"text-sky-600"}
                            customClassContent={"flex flex-col gap-y-[50px]"}>
                         <TableAPI columns={columnsHeader} dataTable={dataHeaderAct} visibleHeader={false} border={true}/>
                         <Point title={"Multipart Field:"} customClassTitle={"text-xl"}>

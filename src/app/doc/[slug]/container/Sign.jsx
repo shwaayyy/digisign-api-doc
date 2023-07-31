@@ -8,10 +8,17 @@ import {
     dataJsonFieldSign,
     dataSignDoc, exJSONReqSign,
     exJSONResSign, exResRedirect, exResRedirectDec,
-    headerSignDoc, RedirectRes,
+    headerSignDoc, Paragraph, RedirectRes,
     resJsonSign
 } from "@/app/doc/helper";
+import CertExp from "/public/cert-exp.png"
 import WVImage from "/public/webview.png"
+import NotifReRegis from "/public/notif-email-reregis.png"
+import FormReRegis from "/public/form-reregis.png"
+import WVSignExample from "/public/example-webview-sign.png"
+import WVBeforeMassRevoke from "/public/before-mass-revoke.png"
+import WVAfterMassRevoke from "/public/after-mass-revoke.png"
+import SignMeterai from "/public/sign-meterai.png"
 import {Card} from "antd";
 import Image from "next/image";
 
@@ -21,7 +28,7 @@ const SignDoc = () => {
         <>
             <div>
                 <SidebarLayout>
-                    <Point title={"API Tandatangan Dokumen"} customClassTitle={"text-sky-800"}
+                    <Point title={"API Tandatangan Dokumen"} customClassTitle={"text-sky-600"}
                            customClassContent={"flex flex-col gap-y-[50px]"}>
                         <TableAPI columns={columnsHeader} dataTable={headerSignDoc} border={true}
                                   visibleHeader={false}/>
@@ -76,6 +83,62 @@ const SignDoc = () => {
                                 </pre>
                             </Card>
                         </div>
+                        <Point title={"Pembaruan terkini untuk API Sign Document WebView"} titleSize={'text-xl'}
+                               customClassTitle={'text-sky-500'} customClassContent={'flex flex-col gap-y-7'}>
+                            <p>{Paragraph[0]}</p>
+                            <Point title={"Contoh WebView – Sertifikat Kedaluwarsa"} titleSize={'text-xl'}
+                                   customClassContent={'flex flex-col gap-y-5'}>
+                                <p>{Paragraph[1]}</p>
+                                <div className={'flex justify-center'}>
+                                    <Image src={CertExp} alt={"sertifikat kedaluwarsa"} className={"self-center"}
+                                           width={600}/>
+                                </div>
+
+                            </Point>
+                            <Point title={"Proses Pendaftaran Ulang"} titleSize={'text-xl'}
+                                   customClassContent={'flex flex-col gap-y-3'}>
+                                <p>{Paragraph[2]}</p>
+                                <div className={'flex flex-row flex-wrap gap-x-3 justify-center'}>
+                                    <Image src={NotifReRegis} alt={"re-registration"} width={600}/>
+                                    <Image src={FormReRegis} alt={"re-registration"} width={600}/>
+                                </div>
+                            </Point>
+                            <Point title={"Contoh WebView - Penerbitan Sertifikat Elektronik Baru"}
+                                   titleSize={'text-xl'} customClassContent={'flex flex-col gap-y-5'}>
+                                <p>{Paragraph[3]}</p>
+                                <div className={'flex justify-center'}>
+                                    <Image src={WVSignExample} alt={"webview"} width={600}/>
+                                </div>
+                            </Point>
+                            <Point title={"Informasi Pencabutan Massal Sertifikat Elektronik Digisign"}
+                                   titleSize={'text-xl'}>
+                                <p>{Paragraph[4]}</p>
+                            </Point>
+                            <Point title={"Contoh WebView – Sebelum Massa Dicabut"} titleSize={'text-xl'}
+                                   customClassContent={'flex flex-col gap-y-5'}>
+                                <p>{Paragraph[5]}</p>
+                                <div className={'flex justify-center'}>
+                                    <Image src={WVBeforeMassRevoke} alt={"mass revoke sign"} className={"self-center"}
+                                           width={600}/>
+                                </div>
+                            </Point>
+                            <Point title={"Contoh WebView – Setelah Massa Dicabut"} titleSize={'text-xl'}
+                                   customClassContent={'flex flex-col gap-y-5'}>
+                                <p>{Paragraph[6]}</p>
+                                <div className={'flex justify-center'}>
+                                    <Image src={WVAfterMassRevoke} alt={"mass revoke sign"} className={"self-center"}
+                                           width={600}/>
+                                </div>
+                            </Point>
+                            <Point title={'Contoh WebView – Menandatangani Dokumen dengan e-Meterai'}
+                                   titleSize={'text-xl'} customClassContent={'flex flex-col gap-y-5'}>
+                                <p>{Paragraph[7]}</p>
+                                <div className={'flex justify-center'}>
+                                    <Image src={SignMeterai} alt={"emeterai sign"} className={"self-center"}
+                                           width={600}/>
+                                </div>
+                            </Point>
+                        </Point>
                     </Point>
                 </SidebarLayout>
             </div>

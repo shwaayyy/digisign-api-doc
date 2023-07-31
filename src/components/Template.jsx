@@ -1,5 +1,5 @@
 'use client'
-import {Layout, Menu, theme} from 'antd';
+import {Layout, Menu as MenuAnt, theme} from 'antd';
 import {useRouter, usePathname} from "next/navigation";
 import {useState} from "react";
 import DigisignLogo from "/public/digisign-id-white.png";
@@ -49,19 +49,19 @@ const itemsNav = [
                 ]
             },
             {
-                label: 'Download',
+                label: 'Download Dokumen',
                 key: 'subdoc2',
                 icon: null,
                 children: [
                     {
                         label: 'File',
                         icon: null,
-                        key: '/file/file_download'
+                        key: '/download/file_download'
                     },
                     {
                         label: 'Base64',
                         icon: null,
-                        key: '/file/base64'
+                        key: '/download/base64'
                     }
                 ]
             },
@@ -129,7 +129,7 @@ const Template = ({children}) => {
                         <Image src={DigisignLogo} alt={"logo"} width={200}/>
                     </Link>
                 </div>
-                <Menu onClick={(v) => router.push(v.key)} theme="dark" defaultSelectedKeys={[pathName]}
+                <MenuAnt onClick={(v) => router.push(v.key)} theme="dark" defaultSelectedKeys={[pathName]}
                       items={itemsNav}
                       inlineIndent={100} mode={'vertical'}/>
             </Sider>

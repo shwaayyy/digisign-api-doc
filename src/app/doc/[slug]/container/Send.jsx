@@ -23,7 +23,7 @@ const SendDoc = () => {
         <>
             <div className="w-full">
                 <SidebarLayout>
-                    <Point title={"API Kirim Dokumen"} customClassTitle={"text-sky-800"}
+                    <Point title={"API Kirim Dokumen"} customClassTitle={"text-sky-600"}
                            customClassContent={"flex flex-col gap-y-[50px]"}>
                         <TableAPI border={true} columns={columnsHeader} dataTable={sendDocHeader}
                                   visibleHeader={false}/>
@@ -73,7 +73,7 @@ const SendDoc = () => {
                             </Card>
                         </div>
                     </Point>
-                    <Point title={"API kirim dokumen dengan e-meterai"} customClassTitle={"text-sky-800"}
+                    <Point title={"API kirim dokumen dengan e-meterai"} customClassTitle={"text-sky-600"}
                            customClassContent={"flex flex-col gap-y-4"}>
                         <p>
                             Kondisi: Jika Anda ingin menggunakan meterai digital, ada beberapa parameter tambahan yang

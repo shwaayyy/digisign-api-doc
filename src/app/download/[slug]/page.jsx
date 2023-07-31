@@ -2,8 +2,8 @@
 
 import {usePathname} from "next/navigation";
 import {useEffect, useState} from "react";
-import FileBase64 from "@/app/file/[slug]/container/FileBase64";
-import FileDownload from "@/app/file/[slug]/container/File";
+import FileBase64 from "@/app/download/[slug]/container/FileBase64";
+import FileDownload from "@/app/download/[slug]/container/File";
 
 const APIFile = () => {
     const [path, setPath] = useState('file_download')

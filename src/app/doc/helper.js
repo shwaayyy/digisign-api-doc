@@ -1,16 +1,16 @@
 export const headerSignDoc = [
     {
-        key: '1',
+        key: 1,
         keyHeader: 'Fungsi',
         valueHeader: 'Api ini digunakan untuk mendapatkan link halaman tandatangan'
     },
     {
-        key: '2',
+        key: 2,
         keyHeader: 'Link',
         valueHeader: 'https://api.tandatanganku.com/gen/genSignPage.html'
     },
     {
-        key: '3',
+        key: 3,
         keyHeader: 'redirect',
         valueHeader: `Anda harus memberikan link redirect dan kami akan mengarahkan ke link ini ketika pengguna telah menandatangani dokumen. \n\n *Pilihan Redirect dalam dokumen kirim API.`
     }
@@ -27,12 +27,12 @@ export const dataSignDoc = [
 
 export const sendDocHeader = [
     {
-        key: '1',
+        key: 1,
         keyHeader: "Fungsi",
         valueHeader: "API ini digunakan untuk mengirimkan dokumen yang ingin di tandatangani oleh pengguna"
     },
     {
-        key: '2',
+        key: 2,
         keyHeader: "Link",
         valueHeader: "https://api.tandatanganku.com/SendDocMitraAT.html"
     }
@@ -40,14 +40,14 @@ export const sendDocHeader = [
 
 export const multipartSendDoc = [
     {
-        key: '1',
+        key: 1,
         field: "jsonfield*",
         dataType: "Json String",
         length: "",
         information: "Periksa bagian jsonfield di bawah ini"
     },
     {
-        key: '2',
+        key: 2,
         field: "file*",
         dataType: "File",
         length: "",
@@ -57,147 +57,147 @@ export const multipartSendDoc = [
 
 export const jsonFieldSendDoc = [
     {
-        key: '1',
+        key: 1,
         field: "jsonfield*",
         dataType: "Json String",
         length: "",
         information: ""
     },
     {
-        key: '2',
+        key: 2,
         field: "userid*",
         dataType: "String",
         length: "80",
         information: "email admin mitra (yang terdaftar di digisign)"
     },
     {
-        key: '3',
+        key: 3,
         field: "document_id*",
         dataType: "String",
         length: "20",
         information: "mitra document id (unique)"
     },
     {
-        key: '4',
+        key: 4,
         field: "payment",
         dataType: "String",
         length: "1",
         information: "tipe pembayaran tandatangan digital. 2 = pembayaran setiap tandatangan (pembayaran per tandatangan), 3 = pembayaran dari pemilik dokumen (pay per dokumen). Default = 3. contoh = 'payment': '3'"
     },
     {
-        key: '5',
+        key: 5,
         field: "redirect*",
         dataType: "Boolean",
         length: "",
         information: "Harus di buat true. saat selesai, halaman akan mengalihkan ke halaman anda"
     },
     {
-        key: '6',
+        key: 6,
         field: "branch (opsional)",
         dataType: "String",
         length: "",
         information: "nama branch"
     },
     {
-        key: '7',
+        key: 7,
         field: "sequence_option*",
         dataType: "boolean",
         length: "",
         information: `Default false. true: proses tandatangan akan berjalan secara berurutan, false: proses tandatangan akan berjalan tidak dengan berurutan`
     },
     {
-        key: '8',
+        key: 8,
         field: "send-to",
         dataType: "Array[json string]",
         length: "",
         information: "daftar pengguna yang bisa melihat dokumen"
     },
     {
-        key: '9',
+        key: 9,
         field: "req-sign*",
         dataType: "Array[json string]",
         length: "",
         information: "daftar pengguna yang bisa melihat dokumen dan tandatangan dokumen"
     },
     {
-        key: '10',
+        key: 10,
         field: "nama*",
         dataType: "String",
         length: "80",
         information: ""
     },
     {
-        key: '11',
+        key: 11,
         field: "email*",
         dataType: "String",
         length: "80",
         information: ""
     },
     {
-        key: '12',
+        key: 12,
         field: "user*",
         dataType: "String",
         length: "30",
         information: "tipe tandatangan: ttd1, ttd, ...; prf1, prf2, ...; ttd = tanda tangan, prf = paraf. Default = 'ttd'"
     },
     {
-        key: '13',
+        key: 13,
         field: "llx*",
         dataType: "String",
         length: "30",
         information: ""
     },
     {
-        key: '14',
+        key: 14,
         field: "lly*",
         dataType: "String",
         length: "30",
         information: ""
     },
     {
-        key: '15',
+        key: 15,
         field: "urx*",
         dataType: "String",
         length: "30",
         information: ""
     },
     {
-        key: '16',
+        key: 16,
         field: "ury*",
         dataType: "String",
         length: "30",
         information: ""
     },
     {
-        key: '17',
+        key: 17,
         field: "page*",
         dataType: "String",
         length: "3",
         information: "halaman ttd"
     },
     {
-        key: '18',
+        key: 18,
         field: "visible*",
         dataType: "String",
         length: "1",
         information: "Digunakan untuk menunjukkan bahwa lokasi lokasi terlihat atau tersembunyi. default visible = true. 0 = false (sembunyi). 1 = true (terlihat)"
     },
     {
-        key: '19',
+        key: 19,
         field: "signing_req (kondisional)",
         dataType: "int",
         length: "",
         information: "Default 0, urutan dari proses tandatangan"
     },
     {
-        key: '20',
+        key: 20,
         field: "meterai_positions (opsional)",
         dataType: "Array[json string]",
         length: "",
         information: "list dari e-meterai lokasi (termasuk: llx, lly, urx, ury, page)"
     },
     {
-        key: '21',
+        key: 21,
         field: "document_type (kondisional)",
         dataType: "String",
         length: "1",
@@ -207,25 +207,25 @@ export const jsonFieldSendDoc = [
 
 export const resSendDoc = [
     {
-        key: '1',
+        key: 1,
         field: "JSONFile*",
         dataType: "Json String",
     },
     {
-        key: '2',
+        key: 2,
         field: "result*",
         dataType: "String",
         length: 2,
         information: 'kode response'
     },
     {
-        key: '3',
+        key: 3,
         field: "notif*",
         dataType: "String",
         information: 'informasi kode response'
     },
     {
-        key: '4',
+        key: 4,
         field: "refTrx*",
         dataType: "String",
         information: 'ID Referensi'
@@ -257,7 +257,7 @@ export const exMessageHeader = [
 
 export const exMessage = [
     {
-        key: '1',
+        key: 1,
         keyHeader: "jsonfield",
         valueHeader: JSON.stringify(
             {
@@ -304,7 +304,7 @@ export const exMessage = [
         )
     },
     {
-        key: '2',
+        key: 2,
         keyHeader: "File",
         valueHeader: "perjanjian.pdf"
     }
@@ -385,7 +385,7 @@ export const columnsMeterai = [
 
 export const meteraiTable = [
     {
-        key: "1",
+        key: 1,
         keyMeterai: "jsonfield",
         valueMeterai: JSON.stringify(
             {
@@ -445,7 +445,7 @@ export const meteraiTable = [
         )
     },
     {
-        key: "2",
+        key: 2,
         keyMeterai: "File",
         valueMeterai: "perjanjian.pdf"
     }
@@ -513,35 +513,35 @@ export const exResJSONMeterai = `<RECEIVE> ${JSON.stringify({
 
 export const dataJsonFieldSign = [
     {
-        key: '1',
+        key: 1,
         field: "JSONField*",
         dataType: "JSON String",
         length: "",
         information: ""
     },
     {
-        key: '2',
+        key: 2,
         field: "userid*",
         dataType: "String",
         length: "80",
         information: "Email admin mitra"
     },
     {
-        key: '3',
+        key: 3,
         field: "document_id*",
         dataType: "String",
         length: "20",
         information: "dokumen id mitra(unik)"
     },
     {
-        key: '4',
+        key: 4,
         field: "email_user*",
         dataType: "String",
         length: "80",
         information: "email pengguna yang ingin tandatangan"
     },
     {
-        key: '5',
+        key: 5,
         field: "view_only (optional)",
         dataType: "boolean",
         length: "",
@@ -551,21 +551,21 @@ export const dataJsonFieldSign = [
 
 export const resJsonSign = [
     {
-        key: '1',
+        key: 1,
         field: "JSONField*",
         dataType: "JSON String",
         length: "",
         information: ""
     },
     {
-        key: '2',
+        key: 2,
         field: "result*",
         dataType: "String",
         length: "2",
         information: "kode respon"
     },
     {
-        key: '3',
+        key: 3,
         field: "link*",
         dataType: "String",
         information: "Tautan html untuk tampilan web proses tandatangan"
@@ -586,28 +586,28 @@ export const exJSONResSign = `<RECEIVE> { "JSONFile" : ${JSON.stringify({
 
 export const RedirectRes = [
     {
-        key: '1',
+        key: 1,
         field: "JSONField",
         dataType: "JSON String",
         length: "",
         information: ""
     },
     {
-        key: '2',
+        key: 2,
         field: "document_id",
         dataType: "String",
         length: "20",
         information: "Dokumen yang baru saja ditandatangani"
     },
     {
-        key: '3',
+        key: 3,
         field: "email_user",
         dataType: "String",
         length: "80",
         information: "Email penandatangan yang baru saja menandatangani dokumen"
     },
     {
-        key: '4',
+        key: 4,
         field: "status_document",
         dataType: "String",
         length: "",
@@ -625,3 +625,15 @@ export const exResRedirectDec = `<RECEIVE> ${JSON.stringify({
     "notif": "Proses tanda tangan berhasil!",
     "email_user": "digisigntest@tandatanganku.com"
 })}`
+
+
+export const Paragraph = [
+    "Ketika pengguna menandatangani dokumen melalui Digisign WebView, Digisign akan mengecek status sertifikat elektronik tersebut dan notifikasi yang akan muncul di WebView akan menyesuaikan status sertifikat elektronik milik pengguna yang akan menandatangani. Masa aktif Sertifikat Elektronik Digisign berlaku selama satu tahun. Setelah itu, pengguna wajib melakukan verifikasi ulang data untuk menerbitkan sertifikat elektronik baru.",
+    "Ketentuan: Pengguna mencoba menandatangani dokumen tetapi sertifikat elektronik milik akun pengguna telah kedaluwarsa. Pengguna diarahkan untuk mendaftar ulang. Informasi terkait proses Registrasi ulang telah terkirim secara otomatis ke email pengguna.",
+    "Ketentuan : Untuk proses Daftar Ulang akan dilakukan verifikasi ulang ke Instansi Pemerintah (Dukcapil) dan akan dipotong saldo verifikasi.",
+    "Setelah proses Registrasi ulang berhasil, pengguna diharapkan kembali ke Sign Document WebView untuk melanjutkan proses tandatangan",
+    "Digisign.id akan melakukan pencabutan sertifikat elektronik secara menyeluruh. Digisign.id akan mencabut sertifikat elektronik Anda terhitung sejak tanggal 27 Juni 2022. Sertifikat elektronik Anda yang baru akan diterbitkan kembali setelah adanya konfirmasi penerbitan sertifikat elektronik oleh Anda melalui aplikasi Digisign atau Digisign Sign Document WebView.",
+    "Ketentuan: Pengguna tetap dapat memilih konfirmasi penerbitan sertifikat elektronik baru diikuti dengan menandatangani dokumen atau hanya menandatangani dokumen. Jika pengguna memilih untuk menandatangani dokumen saja, dokumen akan ditandatangani menggunakan sertifikat elektronik lama. Dokumen tersebut akan tetap berlaku meskipun ditandatangani dengan sertifikat lama.",
+    "Ketentuan: Pengguna harus mengonfirmasi penerbitan sertifikat elektronik sebelum proses penandatanganan dokumen melalui WebView.",
+    "Kondisi: Pengguna menandatangani dokumen yang di dalamnya juga terdapat emeterai melalui WebView."
+]
