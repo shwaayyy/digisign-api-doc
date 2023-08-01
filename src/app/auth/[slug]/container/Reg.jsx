@@ -61,7 +61,7 @@ const Register = () => {
                                             <li key={i}>
                                                 {v.content}
                                                 {v.key === 1 ? (
-                                                    <a href="#" className={"underline text-sky-500"}>Template</a>) : ""}
+                                                    <a href={`/terms`} className={"underline text-sky-500"}>Template</a>) : ""}
                                             </li>
                                         </>
                                     )
