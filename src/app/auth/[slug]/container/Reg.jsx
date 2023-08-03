@@ -105,37 +105,34 @@ const Register = () => {
                             <Card title={"Contoh permintaan JSON diterima di Digisign"} bordered={false}
                                   className={"min-w-fit overflow-x-auto"} type={'inner'}>
                                 <pre className={"overflow-ellipsis"}>
-                                    {"<SEND> [jsonfield] \n{\n" +
-                                        "    \"JSONFile\": {\n" +
-                                        "        \"userid\": \"admin@ptmitra.com\",\n" +
-                                        "        \"jenis_kelamin\":\"laki-laki\",\n" +
-                                        "        \"kota\":\"pekalongan\",\n" +
-                                        "        \"nama\": \"testregistrasi\",\n" +
-                                        "        \"tlp\":\"6281290700111\",\n" +
-                                        "        \"tgl_lahir\":\"10-03-1978\",\n" +
-                                        "        \"idktp\":\"3199091003880012\",\n" +
-                                        "        \"tmp_lahir\":\"pekalongan\",\n" +
-                                        "        \"email\":\"test@hotmail.com\",\n" +
-                                        "        \"redirect\": true\n" +
-                                        "    }\n" +
-                                        "};\n" +
-                                        "[fotoktp] :{ktp.JPG,28114};\n" +
-                                        "[fotodiri] :{foto.JPG,28114};\n" +
-                                        "[ttd] :{ttd.PNG, 28114}"};
+                                    {`<SEND> ${JSON.stringify({
+                                        "JSONFile": {
+                                            "userid": "admin@ptmitra.com",
+                                            "jenis_kelamin": "laki-laki",
+                                            "kota": "pekalongan",
+                                            "nama": "testregistrasi",
+                                            "tlp": "6281290700111",
+                                            "tgl_lahir": "10-03-1978",
+                                            "idktp": "3199091003880012",
+                                            "tmp_lahir": "pekalongan",
+                                            "email": "test@hotmail.com",
+                                            "redirect": true
+                                        }
+                                    }, null, 2)} \n[fotoktp] :{ktp.JPG,28114};\n[fotodiri] :{foto.JPG,28114}; \n[ttd] :{ttd.PNG,28114};`};
                                 </pre>
                             </Card>
                             <Card title={"Contoh respon JSON Digisign dikirimkan ke mitra"} bordered={false}
                                   className={"min-w-fit overflow-x-auto"} type={'inner'}>
                                 <pre className={"whitespace-pre-wrap"}>
-                                    {"<RECEIVE> {\n" +
-                                        "    \"JSONFile\": {\n" +
-                                        "        \"kode_user\": \"230500000000273\",\n" +
-                                        "        \"expired_aktifasi\": \"17-12-2022 09: 00: 21 WIB\",\n" +
-                                        "        \"result\": \"00\",\n" +
-                                        "        \"notif\": \"Berhasil, silahkan check email untuk aktivasi akun anda.\",\n" +
-                                        "        \"info\": \"https://app.tandatanganku.com/preregistration.html?preregister=%2BDFJr3zH4oon2qCuOfHU4Q3D%3D\"\n" +
-                                        "    }\n" +
-                                        "}"}
+                                    {`<RECEIVE> ${JSON.stringify({
+                                        "JSONFile": {
+                                            "kode_user": "230500000000273",
+                                            "expired_aktifasi": "17-12-2022 09: 00: 21 WIB",
+                                            "result": "00",
+                                            "notif": "Berhasil, silahkan check email untuk aktivasi akun anda.",
+                                            "info": "https://app.tandatanganku.com/preregistration.html?preregister=%2BDFJr3zH4oon2qCuOfHU4Q3D%3D"
+                                        }
+                                    }, null, 2)}`}
                                 </pre>
                             </Card>
                         </div>

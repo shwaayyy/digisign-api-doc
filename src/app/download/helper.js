@@ -50,7 +50,7 @@ export const ExampleMessageDownload = [
                 "userid": "admin@gmail.com",
                 "document_id": "20180920_AB"
             }
-        })
+        }, null, 2)
     }
 ]
 
@@ -59,7 +59,7 @@ export const resDownloadfFile = `<SEND> [jsonfield] : "{${JSON.stringify({
         "userid": "admin@gmail.com",
         "document_id": "20180920_AB"
     }
-})}}"`
+}, null, 2)}}"`
 
 export const headerValueBase64 = [
     {
@@ -137,6 +137,6 @@ export const exReqDownload = `<SEND> [jsonfield] : "${JSON.stringify({
         "userid": "admin@gmail.com",
         "document_id": "20180920_AB"
     }
-})}";'`
+}, null, 2)}";'`
 
-export const exResDownload = `<RECEIVE> ${JSON.stringify({"JSONFile": {"result": "00", "file": "base64"}})}`
+export const exResDownload = `<RECEIVE> ${JSON.stringify({"JSONFile": {"result": "00", "file": "base64"}}, null, 2)}`

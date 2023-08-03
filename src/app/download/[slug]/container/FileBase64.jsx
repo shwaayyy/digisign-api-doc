@@ -25,7 +25,7 @@ const FileBase64 = () => {
                         </Point>
                         <Point title={'Json Field:'} titleSize={'text-xl'}>
                             <TableAPI columns={APIColumns} dataTable={JsonFieldDownloadBase64}/>
-                            <small>*) must be filled</small>
+                            <small>*) harus di isi</small>
                         </Point>
                         <Point title={'Respon (Json String):'} titleSize={'text-xl'}>
                             <TableAPI columns={APIColumns} dataTable={resDownloadFileBase64} />

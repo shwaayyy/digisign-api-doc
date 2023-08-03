@@ -26,7 +26,7 @@ const FileDownload = () => {
                         </Point>
                         <Point title={"Json Field:"} titleSize={"text-xl"}>
                             <TableAPI columns={APIColumns} dataTable={JsonFieldDownload}/>
-                            <small>*) must be filled</small>
+                            <small>*) harus di isi</small>
                         </Point>
                         <div className={'leading-8'}>
                             <h2 className={'font-bold text-'}>Respon:</h2>

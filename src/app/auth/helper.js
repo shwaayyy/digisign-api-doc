@@ -397,20 +397,20 @@ export const sampleResData = [
     {
         key: 1,
         keySample: "jsonfield",
-        value: "{\n" +
-            "    \"JSONFile\": {\n" +
-            "        \"userid\": \"admin@ptmitra.com\",\n" +
-            "        \"jenis_kelamin\": \"laki-laki\",\n" +
-            "        \"kota\": \"pekalongan\",\n" +
-            "        \"nama\": \"test registrasi\",\n" +
-            "        \"tlp\": \"6281290700111\",\n" +
-            "        \"tgl_lahir\": \"10-03-1978\",\n" +
-            "        \"idktp\": \"3199091003880012\",\n" +
-            "        \"tmp_lahir\": \"pekalongan\",\n" +
-            "        \"email\": \"test@hotmail.com\",\n" +
-            "        \"redirect\": true\n" +
-            "    }\n" +
-            "}"
+        value: JSON.stringify({
+            "JSONFile": {
+                "userid": "admin@ptmitra.com",
+                "jenis_kelamin": "laki-laki",
+                "kota": "pekalongan",
+                "nama": "test registrasi",
+                "tlp": "6281290700111",
+                "tgl_lahir": "10-03-1978",
+                "idktp": "3199091003880012",
+                "tmp_lahir": "pekalongan",
+                "email": "test@hotmail.com",
+                "redirect": true
+            }
+        }, null, 2)
     },
     {
         key: 2,
@@ -433,74 +433,95 @@ export const resVerData = [
     {
         key: 1,
         title: "data EKTP Tidak ada",
-        val: "{\n" +
-            "    \"JSONFile\": {\n" +
-            "        \"result\": \"12\",\n" +
-            "        \"notif\": \"verifikasi user gagal. NIK\/Nama\/tanggal lahir tidak sesuai\",\n" +
-            "        \"data\": {\n" +
-            "            \"nik\": false,\n" +
-            "            \"name\": false,\n" +
-            "            \"birthdate\": false\n" +
-            "        }\n" +
-            "    }\n" +
-            "}"
+        val: JSON.stringify({
+            "JSONFile": {
+                "result": "12",
+                "notif": "verifikasi user gagal. NIK/Nama/tanggal lahir tidak sesuai",
+                "data": {
+                    "nik": false,
+                    "name": false,
+                    "birthdate": false
+                }
+            }
+        }, null, 2)
     },
     {
         key: 2,
         title: "EKTP tidak sama",
-        val: "{\n" +
-            "    \"JSONFile\": {\n" +
-            "        \"data\": {\n" +
-            "            \"nik\": true,\n" +
-            "            \"name\": true,\n" +
-            "            \"birthdate\": true\n" +
-            "        },\n" +
-            "        \"result\": \"12\",\n" +
-            "        \"notif\": \"verifikasi user gagal.\",\n" +
-            "        \"info\": \"Verifikasi wajah gagal\"\n" +
-            "    }\n" +
-            "}"
+        val: JSON.stringify({
+            "JSONFile": {
+                "data": {
+                    "nik": true,
+                    "name": true,
+                    "birthdate": true
+                },
+                "result": "12",
+                "notif": "verifikasi user gagal.",
+                "info": "Verifikasi wajah gagal"
+            }
+        }, null, 2)
     },
     {
         key: 3,
         title: "data EKTP valid",
-        val: "{\n" +
-            "    \"JSONFile\": {\n" +
-            "        \"data\": {\n" +
-            "            \"nik\": true,\n" +
-            "            \"name\": true,\n" +
-            "            \"birthdate\": true\n" +
-            "        },\n" +
-            "        \"kode_user\": \"210900000000410\",\n" +
-            "        \"expired_aktifasi\": \"29-10-2021 10:19:44 WIB\",\n" +
-            "        \"result\": \"00\",\n" +
-            "        \"notif\": \"Berhasil, silahkan check email untuk aktivasi akun anda.\",\n" +
-            "        \"info\": \"https:\\/\\/app.tandatanganku.com\/preregistration.html?preregister=vXk76mhHhMemw7HbPvpUtA%3D%3D\"\n" +
-            "    }\n" +
-            "}"
+        val: JSON.stringify({
+            "JSONFile": {
+                "data": {
+                    "nik": true,
+                    "name": true,
+                    "birthdate": true
+                },
+                "kode_user": "210900000000410",
+                "expired_aktifasi": "29-10-2021 10:19:44 WIB",
+                "result": "00",
+                "notif": "Berhasil, silahkan check email untuk aktivasi akun anda.",
+                "info": "https://app.tandatanganku.com/preregistration.html?preregister=vXk76mhHhMemw7HbPvpUtA%3D%3D"
+            }
+        }, null, 2)
     },
     {
         key: 4,
         title: "Connection timeout",
-        val: "{\n" +
-            "    \"result\": \"91\",\n" +
-            "    \"notif\": \"system timeout, silahkan coba kembali 10 menit kemudian\"\n" +
-            "}"
+        val: JSON.stringify({
+            "result": "91",
+            "notif": "system timeout, silahkan coba kembali 10 menit kemudian"
+        }, null, 2)
     },
     {
         key: 5,
         title: "Sertifikat berakhir dan pengguna perlu pendaftaran ulang akun",
-        val: "{\n" +
-            "    \"JSONFile\": {\n" +
-            "        \"kode_user\": \"220400000000041\",\n" +
-            "        \"data\": {\n" +
-            "            \"nik\": true,\n" +
-            "            \"name\": true,\n" +
-            "            \"birthdate\": true\n" +
-            "        },\n" +
-            "        \"result\": \"00\",\n" +
-            "        \"notif\": \"Registrasi berhasil. Anda sudah terdaftar sebelumnya, silahkan gunakan layanan Digisign\"\n" +
-            "    }\n" +
-            "}"
+        val: JSON.stringify({
+            "JSONFile": {
+                "kode_user": "220400000000041",
+                "data": {
+                    "nik": true,
+                    "name": true,
+                    "birthdate": true
+                },
+                "result": "00",
+                "notif": "Registrasi berhasil. Anda sudah terdaftar sebelumnya, silahkan gunakan layanan Digisign"
+            }
+        }, null, 2)
     }
 ]
+
+export const resVerData2 = `<SEND> ${JSON.stringify({
+    "JSONFile": {
+        "userid": "admin@gmail.com",
+        "email_user": "test@hotmail.com"
+    }
+}, null, 2)}`
+
+export const resCallback = "https://app.tandatanganku.com/resultact.html?msg=B9zrGI4dF0PAPWDsaTBgrbxWNX%2Fi6qnJhfi%2BrVl9DXuPtMkchM6WIS3b4HRIdWWiFtZAhJqdntS0%0AOAp4L8s7lcH5ER2gVls%2BdYmLnyRDIC3acfsW8ka2MBeBcXb0JpvvC6o8Z%2Fs2%2BCkicCG%2BTPpYBdp%2B%0A6ON36F0b7CE4EfTDXsw%3D"
+
+export const resAfterDecrypt = `<RECEIVE> ${JSON.stringify({
+    "result": "00",
+    "notif": "Proses Aktivasi Berhasil",
+    "email_user": "digisigntest@tandatanganku.com",
+    "nik": "3275094801950033",
+    "verifikasi": {
+        "nama": true,
+        "tanggal_lahir": true,
+        "selfie": true
+    }
+}, null, 2)}`

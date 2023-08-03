@@ -300,7 +300,7 @@ export const exMessage = [
                 }
             },
             null,
-            1
+            2
         )
     },
     {
@@ -351,14 +351,14 @@ export const reqJSON = `<SEND> [jsonfield] : ${JSON.stringify({
             }
         ]
     }
-})}; [file] :{perjanjian.pdf,305603};`
+}, null, 2)}; [file] :{perjanjian.pdf,305603};`
 
 export const exJSONres = `<RECEIVE> ${JSON.stringify({
     "JSONFile": {
         "notif": "Kirim dokumen berhasil.",
         "result": "00"
     }
-})}`
+}, null, 2)};`
 
 export const columnsMeterai = [
     {
@@ -502,14 +502,14 @@ export const exJSONMeterai = `<SEND> [jsonfield]: ${JSON.stringify({
         ],
         "document_type": "2"
     }
-})}; [file] :{perjanjian.pdf, 305603};`
+}, null, 2)}; [file] :{perjanjian.pdf, 305603};`
 
 export const exResJSONMeterai = `<RECEIVE> ${JSON.stringify({
     "JSONFile": {
         "notif": "Kirim dokumen berhasil.",
         "result": "00"
     }
-}, null, 1)}`
+}, null, 2)}`
 
 export const dataJsonFieldSign = [
     {
@@ -577,12 +577,12 @@ export const exJSONReqSign = `<SEND> [jsonfield] : "JSONFile": ${JSON.stringify(
     "email_user": "test@hotmail.com",
     "document_id": "testdoc123",
     "view_only": false
-}, null, 1)}`
+}, null, 2)}`
 
 export const exJSONResSign = `<RECEIVE> { "JSONFile" : ${JSON.stringify({
     "result": "00",
     "link": "https://wv.tandatanganku.com/viewpage.html?view=aO7%2B4ui1zFz%2BsbMl4nb%2BLPAC17uvhMHPZ%2FexPaVRXas8ZAbL%2FElzcV9JxlH5YI%2FuMHtrI3qre6N4AVnkDbQiL%2BTNp3sPsr76xPAsq3cFgbvIH6xcgxJVruMaykkMMqC4bC3WMj%2FiAIM80B4yuuw6KQ%3D%3D"
-})} }`
+}, null, 2)} }`
 
 export const RedirectRes = [
     {
@@ -624,7 +624,7 @@ export const exResRedirectDec = `<RECEIVE> ${JSON.stringify({
     "result": "00",
     "notif": "Proses tanda tangan berhasil!",
     "email_user": "digisigntest@tandatanganku.com"
-})}`
+}, null, 2)};`
 
 
 export const Paragraph = [
