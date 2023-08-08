@@ -18,7 +18,6 @@ import Image from "next/image";
 import {Card} from "antd";
 
 const SendDoc = () => {
-
     return (
         <>
             <div className="w-full">

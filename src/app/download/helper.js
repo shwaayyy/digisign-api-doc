@@ -64,12 +64,12 @@ export const resDownloadfFile = `<SEND> [jsonfield] : "{${JSON.stringify({
 export const headerValueBase64 = [
     {
         key: 1,
-        keyHeader: 'fungsi',
+        keyHeader: 'Fungsi',
         valueHeader: 'API ini digunakan untuk mengunduh dokumen dengan id dokumen'
     },
     {
         key: 2,
-        keyHeader: 'link',
+        keyHeader: 'Link',
         valueHeader: 'https://api.tandatanganku.com/DWMITRA64.html'
     }
 ]

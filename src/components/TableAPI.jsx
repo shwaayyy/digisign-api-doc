@@ -2,7 +2,7 @@
 
 import {Table} from 'antd';
 
-const TableAPI = ({columns, dataTable, visibleHeader, border}) => {
+const TableAPI = ({columns, dataTable, visibleHeader, border, scroll= {}}) => {
     return (
         <Table
             columns={columns}
@@ -10,6 +10,7 @@ const TableAPI = ({columns, dataTable, visibleHeader, border}) => {
             pagination={false}
             showHeader={visibleHeader}
             bordered={border}
+            scroll={scroll}
         />
     );
 }

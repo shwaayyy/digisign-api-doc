@@ -4,6 +4,7 @@ import {usePathname} from "next/navigation";
 import {useEffect, useState} from "react";
 import SendDoc from "@/app/doc/[slug]/container/Send";
 import SignDoc from "@/app/doc/[slug]/container/Sign";
+import BulkSign from "@/app/doc/[slug]/container/BulkSign";
 
 
 const DocProcess = () => {
@@ -18,7 +19,7 @@ const DocProcess = () => {
     return (
         <>
             <div className="w-full">
-                {path === 'send' ? <SendDoc /> : path === 'sign' ? <SignDoc /> : <SendDoc />}
+                {path === 'send' ? <SendDoc /> : path === 'sign' ? <SignDoc /> : path === 'bulk_sign' ? <BulkSign /> : null}
             </div>
         </>
     )

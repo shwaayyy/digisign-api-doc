@@ -11,7 +11,7 @@ export const headerSignDoc = [
     },
     {
         key: 3,
-        keyHeader: 'redirect',
+        keyHeader: 'Redirect',
         valueHeader: `Anda harus memberikan link redirect dan kami akan mengarahkan ke link ini ketika pengguna telah menandatangani dokumen. \n\n *Pilihan Redirect dalam dokumen kirim API.`
     }
 ]

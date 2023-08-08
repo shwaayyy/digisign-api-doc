@@ -149,19 +149,6 @@ export const dataHeader = [
     },
 ];
 
-export const registerColumns = [
-    {
-        title: 'Name',
-        dataIndex: 'keyHeader',
-        key: 'keyHeader',
-    },
-    {
-        title: 'Value',
-        dataIndex: 'valueHeader',
-        key: 'valueHeader',
-    }
-]
-
 export const dataReg = [
     {
         key: 1,

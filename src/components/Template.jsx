@@ -45,6 +45,11 @@ const itemsNav = [
                         label: 'Tandatangan Dokumen',
                         icon: null,
                         key: '/doc/sign'
+                    },
+                    {
+                        label: 'Bulk Sign',
+                        icon: null,
+                        key: '/doc/bulk_sign'
                     }
                 ]
             },

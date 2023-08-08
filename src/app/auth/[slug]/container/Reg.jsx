@@ -6,7 +6,6 @@ import TableAPI from "@/components/TableAPI";
 import {
     columnsHeader as columns,
     dataHeader as data,
-    registerColumns,
     dataReg,
     termsContent,
     APIColumns,
@@ -14,7 +13,7 @@ import {
     dataJsonField,
     responseAPI,
     sampleResCol,
-    sampleResData, resVerData
+    sampleResData, resVerData, columnsHeader
 } from "@/app/auth/helper";
 import {Card} from "antd";
 import {useEffect, useState} from "react";
@@ -61,7 +60,8 @@ const Register = () => {
                                             <li key={i}>
                                                 {v.content}
                                                 {v.key === 1 ? (
-                                                    <a href={`/terms`} className={"underline text-sky-500"}>Template</a>) : ""}
+                                                    <a href={`/terms`}
+                                                       className={"underline text-sky-500"}>Template</a>) : ""}
                                             </li>
                                         </>
                                     )
@@ -79,7 +79,7 @@ const Register = () => {
                         customClassTitle={"text-sky-700"}
                         customClassContent={"flex flex-col gap-y-7"}
                     >
-                        <TableAPI visibleHeader={false} dataTable={dataReg} columns={registerColumns} border={true}/>
+                        <TableAPI visibleHeader={false} dataTable={dataReg} columns={columnsHeader} border={true}/>
                         <Point title={"Multipart Field:"} titleSize={"text-xl"}>
                             <TableAPI columns={APIColumns} dataTable={multipartData}/>
                         </Point>
@@ -144,7 +144,8 @@ const Register = () => {
                                     return (
                                         <Card title={`${seq}. ${v.title}`} type={"inner"} className={"w-full"} key={i}
                                               bordered={false}>
-                                            <div className={"whitespace-pre-wrap font-mono overflow-ellipsis text-sm"}>{v.val}</div>
+                                            <div
+                                                className={"whitespace-pre-wrap font-mono overflow-ellipsis text-sm"}>{v.val}</div>
                                         </Card>
                                     )
                                 })}
