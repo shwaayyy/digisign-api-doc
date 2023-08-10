@@ -707,7 +707,62 @@ export const Base64DownloadCode = [
         }, null, 2),
         info: "sukses download base64."
     }
-
 ]
 
-
+export const ChangePhoneNumAndEmailCode = [
+    {
+        key: 1,
+        response: JSON.stringify({"JSONFile": {"result": "00", "notif": "Sukses update data"}}, null, 2),
+        info: "sukses update data."
+    },
+    {
+        key: 2,
+        response: JSON.stringify({
+            "JSONFile": {
+                "result": "14",
+                "notif": "Email pengganti sudah terdaftar, silahkan gunakan email lain."
+            }
+        }, null, 2),
+        info: "Email pengganti sudah terdaftar, silahkan gunakan email lain."
+    },
+    {
+        key: 3,
+        response: JSON.stringify({
+            "JSONFile": {
+                "result": "14",
+                "notif": "User sudah aktif, silahkan mengubah data pada halaman dashboard"
+            }
+        }, null, 2),
+        info: "User sudah aktif, silahkan mengubah data pada halaman dashboard."
+    },
+    {
+        key: 4,
+        response: JSON.stringify({
+            "JSONFile": {
+                "result": "14",
+                "notif": "Nomor handphone pengganti sudah terdaftar, silahkan gunakan nomor handpone lain."
+            }
+        }, null, 2),
+        info: "Nomor handphone pengganti sudah terdaftar, silahkan gunakan nomor handpone lain."
+    },
+    {
+        key: 5,
+        response: JSON.stringify({"JSONFile": {"result": "05", "notif": "Email belum terdaftar"}}, null, 2),
+        info: "Email belum terdaftar."
+    },
+    {
+        key: 6,
+        response: JSON.stringify({
+            "JSONFile": {
+                "res": "06",
+                "notif": "Update email atau no hp gagal"
+            }
+        }, null, 2),
+        info: "Update email atau no hp gagal."
+    },
+    {
+        key: 7,
+        response: JSON.stringify({"JSONFile": {"result": "08", "notif": "Nomor hp lama tidak cocok"}}, null, 2),
+        info: "Nomor hp lama tidak cocok."
+    }
+]

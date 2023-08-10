@@ -4,7 +4,7 @@ import TableAPI from "@/components/TableAPI";
 import {
     actResponse,
     ApiSendDocCode,
-    ApiSignDocCode, Base64DownloadCode,
+    ApiSignDocCode, Base64DownloadCode, ChangePhoneNumAndEmailCode,
     generalResponse,
     regResponse,
     responseApiHeader
@@ -34,6 +34,9 @@ const APIResCodePage = () => {
                         </Point>
                         <Point title={'Response download dokumen base64'} titleSize={'text-xl'}>
                             <TableAPI columns={responseApiHeader} dataTable={Base64DownloadCode} border={true} scroll={{x: 100}} />
+                        </Point>
+                        <Point title={'Response ganti email dan nomor hp'} titleSize={'text-xl'}>
+                            <TableAPI columns={responseApiHeader} dataTable={ChangePhoneNumAndEmailCode} border={true} scroll={{x: 100}} />
                         </Point>
                     </Point>
                 </SidebarLayout>

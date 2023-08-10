@@ -54,12 +54,12 @@ export const ExampleMessageDownload = [
     }
 ]
 
-export const resDownloadfFile = `<SEND> [jsonfield] : "{${JSON.stringify({
+export const resDownloadfFile = `<SEND> [jsonfield] : ${JSON.stringify({
     "JSONFile": {
         "userid": "admin@gmail.com",
         "document_id": "20180920_AB"
     }
-}, null, 2)}}"`
+}, null, 2)}`
 
 export const headerValueBase64 = [
     {
