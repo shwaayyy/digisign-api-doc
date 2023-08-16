@@ -766,3 +766,54 @@ export const ChangePhoneNumAndEmailCode = [
         info: "Nomor hp lama tidak cocok."
     }
 ]
+
+export const HtmlResCodeCol = [
+    {
+        key: 'code',
+        title: 'Kode',
+        dataIndex: 'code'
+    },
+    {
+        key: 'info',
+        title: 'informasi',
+        dataIndex: 'info'
+    }
+]
+
+export const HtmlResCodeWV = [
+    {
+        code: 200,
+        info: 'sukses'
+    },
+    {
+        code: 403,
+        info: 'token user/admin tidak valid'
+    },
+    {
+        code: 401,
+        info: 'user tidak ditemukan|'
+    },
+    {
+        code: 404,
+        info: 'dokumen tidak ditemukan'
+    },
+    {
+        code: 408,
+        info: 'sesi habis'
+    }
+]
+
+export const HtmlResCodeDownload = [
+    {
+        code: 200,
+        info: 'sukses'
+    },
+    {
+        code: 403,
+        info: 'mitra tidak diizinkan untuk aksed dokumen'
+    },
+    {
+        code: 404,
+        info: 'dokumen tidak ditemukan'
+    }
+]
