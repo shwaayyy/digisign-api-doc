@@ -782,22 +782,27 @@ export const HtmlResCodeCol = [
 
 export const HtmlResCodeWV = [
     {
+        key: 1,
         code: 200,
         info: 'sukses'
     },
     {
+        key: 2,
         code: 403,
         info: 'token user/admin tidak valid'
     },
     {
+        key: 3,
         code: 401,
-        info: 'user tidak ditemukan|'
+        info: 'user tidak ditemukan'
     },
     {
+        key: 4,
         code: 404,
         info: 'dokumen tidak ditemukan'
     },
     {
+        key: 5,
         code: 408,
         info: 'sesi habis'
     }
@@ -805,15 +810,46 @@ export const HtmlResCodeWV = [
 
 export const HtmlResCodeDownload = [
     {
+        key: 1,
         code: 200,
         info: 'sukses'
     },
     {
+        key: 2,
         code: 403,
-        info: 'mitra tidak diizinkan untuk aksed dokumen'
+        info: 'mitra tidak diizinkan untuk akses dokumen'
     },
     {
+        key: 3,
         code: 404,
         info: 'dokumen tidak ditemukan'
+    }
+]
+
+export const ApiResCodeBulk = [
+    {
+        key: 1,
+        code: '$trxjson',
+        info: 'parameter tidak komplit'
+    },
+    {
+        key: 2,
+        code: JSON.stringify({"JSONFile": {"result": "05", "notif": "dokumen tidak ditemukan"}}, null, 2),
+        info: 'dokumen tidak ditemukan'
+    },
+    {
+        key: 3,
+        code: JSON.stringify({"JSONFile":{"result":"05","notif":"user tidak ditemukan"}}, null, 2),
+        info: 'user tidak ditemukan'
+    },
+    {
+        key: 4,
+        code: JSON.stringify({"JSONFile":{"result":"05","notif":"user telah menandatangani dokumen ini"}}, null, 2),
+        info: 'user tidak masuk penandatangan dokumen ini'
+    },
+    {
+        key: 5,
+        code: JSON.stringify({"JSONFile":{"result":"00","link":"https:\/\/wv.tandatanganku.com\/bulksigningpage.html?sgn=3%2FuywTp5TNUDqey3614sTG1fa3UGBy7IJAKY93i4oDbjKXWUbZnOUGQii5BhHYk7tE5QAc3nDSJG2TMP2XDUKN%2BpyCTVoZQB2t8sV9yENmDZ885QAsPZ6OD2VtLAwq9GmlvmGkl5%2F18Pb6LFS3GFBg%3D%3D"}}, null, 2),
+        info: 'sukses generate link tandatangan'
     }
 ]

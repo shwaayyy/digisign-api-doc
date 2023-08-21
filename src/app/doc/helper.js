@@ -637,3 +637,147 @@ export const Paragraph = [
     "Ketentuan: Pengguna harus mengonfirmasi penerbitan sertifikat elektronik sebelum proses penandatanganan dokumen melalui WebView.",
     "Kondisi: Pengguna menandatangani dokumen yang di dalamnya juga terdapat emeterai melalui WebView."
 ]
+
+export const bulksignHeaderTable = [
+    {
+        key: 1,
+        keyHeader: 'fungsi',
+        valueHeader: 'API ini digunakan untuk melakukan tandatangan bulk dokumen'
+    },
+    {
+        key: 2,
+        keyHeader: 'Link',
+        valueHeader: 'send multipart/form with POST to https://api.tandatanganku.com/gen/genBulkSign.html'
+    },
+    {
+        key: 3,
+        keyHeader: 'Redirect/callback',
+        valueHeader: 'You must provide link redirect/callback and we will redirect/callback to this link when the user has signed document. *Opsi pengalihan dalam API Kirim Dokumen.'
+    }
+]
+
+export const bulksignHeader = [
+    {
+        key: 1,
+        keyHeader: 'Content-type',
+        valueHeader: 'multipart/form-data'
+    },
+    {
+        key: 2,
+        keyHeader: 'Authorization',
+        valueHeader: 'Bearer (token)'
+    }
+]
+
+export const bulksignBody = [
+    {
+        key: 1,
+        field: "JSONFile**",
+        dataType: "Json String",
+    },
+    {
+        key: 2,
+        field: "userid*",
+        dataType: "String",
+        length: "80",
+        information: "Email admin mitra"
+    },
+    {
+        key: 3,
+        field: 'document_id*',
+        dataType: 'String[]',
+        information: 'List of documents that want to sign, minimal 2 dokumen, maximal 100 dokumen'
+    },
+    {
+        key: 4,
+        field: 'email_user*',
+        dataType: 'String',
+        length: '80',
+        information: 'User Email will sign'
+    },
+    {
+        key: 5,
+        field: 'must read',
+        dataType: 'boolean',
+        information: 'If true then we will send document link for each document. The documents must be read by the user. And the user will only sign the documents that they have read If false then the user will sign the documents that exist in the document id list'
+    }
+]
+
+export const bulksignRes = [
+    {
+        key: 1,
+        field: "JSONFile*",
+        dataType: "Json String",
+    },
+    {
+        key: 2,
+        field: "result",
+        dataType: "String",
+        length: "2",
+        information: "kode respon"
+    },
+    {
+        key: 3,
+        field: "link*",
+        dataType: "String",
+        information: "Tautan html untuk tampilan web proses tandatangan"
+    }
+]
+
+export const exReqBulksign = `<SEND> [jsonfield] : ${JSON.stringify({
+    "JSONFile": {
+        "userid": "admin@digisignpartner.com",
+        "document_id": [
+            "DC12333111",
+            "DC12333121",
+            "DC12333112",
+        ],
+        "email_user": "userdigisign@gmail.com"
+    }
+}, null, 2)}`
+
+export const exResBulksign = `<RECEIVE> ${JSON.stringify({
+    "JSONFile": {
+        "result": "00",
+        "link": "https:\/\/wv.tandatanganku.com\/bulksigningpage.html?sgn=32FuywTp5TNUDqey3614sTG1fa3UGBy7IJAKY93i4oDbjKXWUbZnOUGQii5BhHYk7tE5QAc3nDSJG2TMP2XDUKN%2BpyCTVoZQB2t8sV9yENmDZ885QAsPZ6OD2VtLAwq9GmlvmGkl5%2F18Pb6LFS3GFBg%3D%3D"
+    }
+}, null, 2)};`
+
+export const resCallbackBulk = [
+    {
+        key: 1,
+        field: "JSONField",
+        dataType: "JSON String",
+    },
+    {
+        key: 2,
+        field: "document_id",
+        dataType: "String",
+        length: "20",
+        information: "dokumen sudah di tandatangani"
+    },
+    {
+        key: 3,
+        field: "email_user",
+        dataType: "String",
+        length: "80",
+        information: "email pengguna yang ingin tandatangan"
+    },
+    {
+        key: 4,
+        field: "status_document",
+        dataType: "String",
+        length: "",
+        information: "Status Dokumen. completed: semua pengguna telah menandatangani dokumen. waiting: ada pengguna yang belum menandatangani dokumen"
+    }
+]
+
+export const exResBulksignEncrypt = `https://app.tandatanganku.com/result.php?msg=Cij6Jz9ui76E5Ky%2FqJRqt8Ib2Yof3uEQFYTskZ2i8R6C9C8TJVi9ydinxu3twztB3100V0Lvsgp5%0AY03FrxOcU%2Bwh5cXOdKWbJIDFx%2FdNTpijFSaTeYSpbNORmIxtBHwuR22xONzLIOnenTILYkq8cYhW%0ANSnwraDDXH9jLjg1zkVXgHviM7FQAgn8%2BiJOqjpW5XtRM7HSx7CHeXk%2FLGNNpZiW5MPYE69aNgGW%0AHShhxek%3D`
+
+export const exResBulksignDecrypt = JSON.stringify({
+    "document_id": "sni040302",
+    "status_document": "complete",
+    "result": "00",
+    "notif": "Proses tanda tangan berhasil!",
+    "email_user": "userdigisign@gmail.com"
+}, null, 2)
