@@ -10,10 +10,10 @@ const HTMLResCodePage = () => {
                 <SidebarLayout>
                     <Point title={'Kode Respon HTML'} customClassContent={'flex flex-col gap-y-[50px]'}>
                         <Point title={'Respon WebView'} titleSize={'text-lg'}>
-                            <TableAPI columns={HtmlResCodeCol} dataTable={HtmlResCodeWV} border={true} />
+                            <TableAPI columns={HtmlResCodeCol} dataTable={HtmlResCodeWV} border={true}/>
                         </Point>
                         <Point title={'Respon unduh file'} titleSize={'text-lg'}>
-                            <TableAPI columns={HtmlResCodeCol} dataTable={HtmlResCodeDownload} border={true} />
+                            <TableAPI columns={HtmlResCodeCol} dataTable={HtmlResCodeDownload} border={true}/>
                         </Point>
                     </Point>
                 </SidebarLayout>
