@@ -2,7 +2,7 @@ import SidebarLayout from "@/components/Template";
 import Point from "@/components/Point";
 import TableAPI from "@/components/TableAPI";
 import {
-    actResponse,
+    actResponse, ApiResCodeBulk,
     ApiSendDocCode,
     ApiSignDocCode, Base64DownloadCode, ChangePhoneNumAndEmailCode,
     generalResponse,
@@ -37,6 +37,9 @@ const APIResCodePage = () => {
                         </Point>
                         <Point title={'Response ganti email dan nomor hp'} titleSize={'text-xl'}>
                             <TableAPI columns={responseApiHeader} dataTable={ChangePhoneNumAndEmailCode} border={true} scroll={{x: 100}} />
+                        </Point>
+                        <Point title={'Response Bulksign'} titleSize={'text-xl'}>
+                            <TableAPI columns={responseApiHeader} dataTable={ApiResCodeBulk} border={true} scroll={{x: 100}} />
                         </Point>
                     </Point>
                 </SidebarLayout>
