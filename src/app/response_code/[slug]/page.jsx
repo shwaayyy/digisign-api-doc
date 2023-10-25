@@ -14,7 +14,7 @@ const ResCode = () => {
         const pathName = params.split("/")
         setPath(pathName[pathName.length - 1])
     }, [])
-
+    
     return path === 'html' ? <HTMLResCodePage /> : path === 'api' ? <APIResCodePage /> : <Template>
         <div className={'w-full h-full flex justify-center items-center'}><LoadingOutlined className={'text-7xl'}/></div>
     </Template>
